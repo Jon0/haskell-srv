@@ -1,11 +1,23 @@
 module Main where
 
+import System.Environment
+import System.IO
+
+
+printArray :: [String] -> IO ()
+printArray [] = do
+    return ()
+printArray (x:xs) = do
+    putStrLn x
+    printArray xs
+
+
 printArgs :: IO ()
-printArgs =
+printArgs = do
+    args <- getArgs
+    printArray args
 
 
 main :: IO ()
 main = do
-    (command:args) <- getArgs
-    putStrLn ("Command: " ++ command)
-    putStrLn ("Args: " ++ args)
+    printArgs
