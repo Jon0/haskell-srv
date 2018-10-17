@@ -1,4 +1,4 @@
-# Revision history for mlc
+# Revision history for haskell-srv
 
 ## 0.1  -- YYYY-mm-dd
 
