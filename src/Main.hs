@@ -9,8 +9,8 @@ import Network.Socket
 replyFn :: Handle -> IO ()
 replyFn hdl = do
 	inpStr <- hGetLine hdl
-	hPutStrLn hdl ("HTTP/1.1 200 OK\r\n\r\n")
-	hPutStrLn hdl ("Test\n")
+	hPutStr hdl ("HTTP/1.1 200 OK\r\n\r\n")
+	hPutStr hdl ("Testing")
 
 
 -- socket to listen on a port
